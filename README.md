@@ -1,4 +1,4 @@
-# Del análisis al ahorro: optimización de tarifa eléctrica con Power BI y DAX
+# Optimización de tarifa eléctrica con Power BI y DAX
 
 > Antonio tiene 66 años y está jubilado. Durante muchos años desarrolló una actividad profesional que requería el uso continuado de maquinaria en una instalación que compartía suministro eléctrico con su vivienda, lo que justificaba un elevado consumo energético y una potencia contratada de **16,44 kW**. Tras su jubilación, Antonio cesa esa actividad y vende la maquinaria. Sin embargo, aunque sus necesidades energéticas cambian radicalmente, la instalación eléctrica permanece igual, porque vivienda y negocio nunca tuvieron contadores ni contratos separados.
 

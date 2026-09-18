@@ -1,4 +1,4 @@
-# Del análisis al ahorro: Optimización de tarifa eléctrica con Power BI y DAX
+# Optimización de tarifa eléctrica con Power BI y DAX
 
 > Documentación técnica del modelo: arquitectura de datos, columnas calculadas, medidas DAX, origen de los datos y limitaciones conocidas.
 
