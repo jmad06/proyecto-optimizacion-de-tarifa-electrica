@@ -42,7 +42,8 @@ Peaje 2.0TD en modalidad de precio único (24 h) con 10 kW contratados. El cambi
 ## Documentación ampliada
 
 - **[Análisis completo](docs/analisis-completo.md)** — el caso de Antonio, la estructura del dashboard pestaña a pestaña y la decisión final con su desglose de impacto.
-- **[Arquitectura técnica](docs/arquitectura-tecnica.md)** — modelo de datos, columnas calculadas, medidas DAX, origen de los datos y limitaciones.
+- **[Arquitectura técnica](docs/arquitectura-tecnica.md)** — modelo de datos, columnas calculadas, diccionario de medidas DAX, origen de los datos y limitaciones.
+- **[Fórmulas y medidas DAX](DAX/dax.md)** — código completo y explicación detallada de todas las columnas calculadas y medidas DAX del modelo.
 - **[Informe ejecutivo](docs/informe-ejecutivo.md)** — el mismo análisis en formato de informe interno de empresa (planteamiento, hallazgos, recomendaciones, próximos pasos, fuentes de datos).
 
 ---
@@ -77,6 +78,8 @@ Peaje 2.0TD en modalidad de precio único (24 h) con 10 kW contratados. El cambi
 │	    └── tarifas.csv
 ├── dashboard/
 │   └── dashboard.pbix
+├── DAX/
+│   └── dax.md
 ├── docs/
 │   ├── analisis-completo.md
 │   ├── arquitectura-tecnica.md
