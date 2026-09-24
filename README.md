@@ -1,8 +1,8 @@
 # Optimización de tarifa eléctrica con Power BI y DAX
 
-> Antonio tiene 66 años y está jubilado. Durante muchos años desarrolló una actividad profesional que requería el uso continuado de maquinaria en una instalación que compartía suministro eléctrico con su vivienda, lo que justificaba un elevado consumo energético y una potencia contratada de **16,44 kW**. Tras su jubilación, Antonio cesa esa actividad y vende la maquinaria. Sin embargo, aunque sus necesidades energéticas cambian radicalmente, la instalación eléctrica permanece igual, porque vivienda y negocio nunca tuvieron contadores ni contratos separados.
+Análisis de un caso real de sobredimensionamiento de potencia contratada (16,44 kW frente a 6 kW de demanda máxima), a partir de 17.542 registros horarios de consumo y facturas reales.
+Dashboard interactivo de cuatro pestañas que simula tres escenarios de contrato y cuantifica un ahorro anual de 586,07 € (-37,8 %) en energía y potencia.
 
-**Autor**: Jose Maderas
 **Stack:** Excel · Power BI · DAX
 
 ![Demo del dashboard](docs/img/dashboard.gif)
@@ -41,28 +41,21 @@ Peaje 2.0TD en modalidad de precio único (24 h) con 10 kW contratados. El cambi
 
 ## Documentación ampliada
 
-- **[Análisis completo](docs/analisis-completo.md)** — el caso de Antonio, la estructura del dashboard pestaña a pestaña y la decisión final con su desglose de impacto.
-- **[Arquitectura técnica](docs/arquitectura-tecnica.md)** — modelo de datos, columnas calculadas, diccionario de medidas DAX, origen de los datos y limitaciones.
-- **[Fórmulas y medidas DAX](DAX/dax.md)** — código completo y explicación detallada de todas las columnas calculadas y medidas DAX del modelo.
-- **[Informe ejecutivo](docs/informe-ejecutivo.md)** — el mismo análisis en formato de informe interno de empresa (planteamiento, hallazgos, recomendaciones, próximos pasos, fuentes de datos).
+| Documento | Descripción |
+|---|---|
+| [Análisis completo](docs/analisis-completo.md) | El caso de Antonio, la estructura del dashboard pestaña a pestaña y la decisión final con su desglose de impacto |
+| [Arquitectura técnica](docs/arquitectura-tecnica.md) | Modelo de datos, columnas calculadas, diccionario de medidas DAX, origen de los datos y limitaciones |
+| [Fórmulas y medidas DAX](DAX/dax.md) | Código completo y explicación detallada de todas las columnas calculadas y medidas DAX del modelo |
+| [Informe ejecutivo](docs/informe-ejecutivo.md) | El mismo análisis en formato de informe interno de empresa (planteamiento, hallazgos, recomendaciones, próximos pasos, fuentes de datos) |
 
 ---
 
 ## Requisitos y cómo reproducir
 
-### Requisitos
-
-- **Power BI Desktop**
-- **Configuración regional**: el modelo usa formato español (decimales con coma, fechas dd/mm/aaaa). Si tu Power BI Desktop está configurado en otra región, algunas medidas pueden requerir ajuste de separador decimal
-- **Excel**: el archivo `Datos de costes energéticos.xlsx` debe mantenerse en la ruta relativa `data/` respecto al `.pbix`, ya que el modelo usa modo de importación (Import) sobre este archivo como fuente única
-
-### Cómo reproducir
-
-1. Clona o descarga este repositorio completo, manteniendo la estructura de carpetas (`data/` y `dashboard/` al mismo nivel)
-2. Abre `dashboard/dashboard.pbix` con Power BI Desktop
-3. Si Power BI solicita reautenticar el origen de datos, apunta a la ruta local de `data/data.xlsx` dentro de tu copia del repositorio
-4. Actualiza el modelo (`Inicio > Actualizar`) para confirmar que las relaciones cargan sin errores
-5. Las cuatro pestañas (Consumo, Potencia, Comparativa, Ahorro) son interactivas: los filtros de Periodo, Tipo de Día y Tarifa afectan a los visuales relacionados dentro de cada pestaña
+| Escenario | Requisito |
+|---|---|
+| Consulta o lectura del dashboard | Abrir `dashboard/dashboard.pbix` con Power BI Desktop. No requiere nada más: el modo de conexión es Import, los datos ya están embebidos en el `.pbix` |
+| Actualización de datos | Modificar el parámetro `RutaExcel` en Power Query para apuntar a la ubicación local de `data.xlsx` |
 
 ### Contenido del repositorio
 
